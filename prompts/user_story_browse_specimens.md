@@ -1,0 +1,5 @@
+# user_story_browse_specimens.md
+
+Alice is browsing a box in the Specimen Entry Dashboard. She is checking provenance details on specimens in the box to answer a question an investigator has posed. Neither the specimen list in the lower pane nor the box grid in the right-hand pane shows the provenance details she is reviewing, but they are on the specimen record. She clicks a cell in the box grid in the right-hand pane to inspect a specimen. All the specimen details are shown in the left-hand pane. She notes the provenance values and continues selecting other cells in the box grid to display their details.
+
+Alice realizes the specimens she has checked belong to the wrong participant. She looks at the specimen list in the lower pane and sees the specimens she wanted to review. She clicks one, and the left-hand pane updates with the details of that specimen. At the same time, the box grid highlights that specimen's cell. Alice continues to select cells or list items at will. The left-hand pane always updates with the current specimen details.

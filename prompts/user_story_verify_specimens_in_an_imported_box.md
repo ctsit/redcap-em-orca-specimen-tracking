@@ -19,7 +19,7 @@ To verify a specimen with the scanner, Alice can pull the specimen and scan its 
 
 ### Acknowledging specimens that match the imported shipment
 
-Any time Alice loads a specimen record she's happy with, Alice can click the _Verify and Save_ button in the left-hand pane.
+Any time Alice loads a specimen record she's happy with, Alice can click the _Verify and Save_ button in the left-hand pane. The left-hand pane also has a plain _Save_ button that saves edits without changing the specimen's verification status.
 
 Alice repeats these operations for several specimens until she is satisfied the shipment data is accurate. She can verify as many or as few as she likes. When she is satisfied the box is accurate, Alice clicks the _Verify entire box_ button. In response, a dialog opens and asks, "Do you want to mark every specimen and the box record as verified?" Alice clicks "OK", ignoring the "Cancel" button.
 
