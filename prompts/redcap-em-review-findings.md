@@ -50,7 +50,7 @@ Standard `/code-review` pass: 9 findings. REDCap-EM checklist pass: 5 findings.
    It doesn't mention the Vite 5→8 and plugin-vue 4→6 upgrades, the switch to a single multi-entry vite config, or the BlockUI/style.scss removals.
 
 4. **framework-version 14; current is 17** — `config.json:16` (redcap-modernization)
-   v14 dates from 2023-06. v16 (2024-08) and v17 (2026-04) are current.
+   v14 dates from 2023-06. v17 (2026-04) is current; v16 dates from 2024-08.
 
 5. **UI strings hardcoded; no i18n** — `src/components/ConfigMain.vue:423` (redcap-modernization)
    New strings such as "Specimen Box List" are hardcoded English. The module has no `lang/English.ini` and doesn't use `tt()`.
