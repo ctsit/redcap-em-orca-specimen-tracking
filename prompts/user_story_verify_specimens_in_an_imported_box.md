@@ -9,7 +9,7 @@ Alice, who we discussed in `./user_story_background.md`, manages the CURATE Bior
 Alice now needs to verify that the shipment reflects the data in the imported shipment object. Alice removes the first box of specimens from the shipping container. She checks the box for a name.
 
 - If she finds a name, she locates that box in the imported shipment and opens it.
-- If Alice doesn't see a name on the box, she pulls a specimen from the box and scans it into a search field. OST presents any records that match and offers a button to open any of the matches. There should be only one match. Alice opens the match.
+- If Alice doesn't see a name on the box, she pulls a specimen from the box and scans it into a search field. OST presents any records that match and offers a button to open any of the matches. For a QR-coded specimen, there should be only one match. Alice opens the match.
 
 With either course, OST opens the Specimen Entry Dashboard to that box. This presents a graphical representation of the box on the right, details about the selected specimen on the left, and a list of the box's specimens below.
 
@@ -21,11 +21,11 @@ To verify a specimen with the scanner, Alice can pull the specimen and scan its 
 
 Any time Alice loads a specimen record she's happy with, Alice can click the _Verify and Save_ button in the left-hand pane. The left-hand pane also has a plain _Save_ button that saves edits without changing the specimen's verification status.
 
-Alice repeats these operations for several specimens until she is satisfied the shipment data is accurate. She can verify as many or as few as she likes. When she is satisfied the box is accurate, Alice clicks the _Verify entire box_ button. In response, a dialog opens and asks, "Do you want to mark every specimen and the box record as verified?" Alice clicks "OK", ignoring the "Cancel" button.
+Alice repeats these operations for several specimens until she is satisfied the shipment data is accurate. She can verify as many or as few as she likes. When she is satisfied the box is accurate, Alice clicks the _Verify entire box_ button. In response, a dialog opens and asks, "Do you want to mark every specimen in a cell and the box record as verified?" Alice clicks "OK", ignoring the "Cancel" button. Orphans are not verified.
 
 ### Fixing mismatch between specimen location and the imported shipment
 
-If Alice finds a specimen in the wrong box cell, she needs to match the specimen location to the shipment data or vice versa. OST has a _Rescan Box_ feature to help her re-inventory all or part of a box. Rescan Box mode is designed for moving known specimens between cells and boxes. Aside from the box and cell, Rescan Box mode does not allow editing of a specimen. In Rescan Box mode, OST disables editing in the left-hand pane, exposes a specimen name search field, and positions the cursor in the search field. Data entry in the search field will auto-complete any specimen name. With a unique specimen name of an existing specimen in the search field, pressing the Enter key will:
+If Alice finds a specimen in the wrong box cell, she needs to match the specimen location to the shipment data or vice versa. OST has a _Rescan Box_ feature to help her re-inventory all or part of a box. Rescan Box mode is designed for moving known specimens between cells and boxes. Aside from the box and cell, Rescan Box mode does not allow editing of a specimen. In Rescan Box mode, OST disables editing in the left-hand pane, exposes a specimen name search field, and positions the cursor in the search field. Data entry in the search field will auto-complete any specimen name. With a unique specimen name of an existing specimen in the search field, pressing the Enter key will (for hand-labeled specimens whose labels match several records, see `./user_story_review_migrated_boxes.md`):
 
 1. Move the scanned specimen to the selected cell on the box grid, setting the box ID as well if needed.
 2. Move the displaced specimen (if any) to the box and cell previously allocated to the scanned specimen.
