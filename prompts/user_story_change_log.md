@@ -8,7 +8,7 @@ Each entry records:
 
 - when the change happened and which user made it
 - the box and specimen affected
-- what changed, with old and new values (for example, cell B4 → C7, or unverified → verified)
+- what changed, with old and new values (for example, cell B4 → C7, or `specimen_verified` No → Yes)
 - the OST action that caused it, such as shipment import, Rescan Box mode, drag and drop, _Orphan_, _Delete_, _Delete unverified orphans_, _Save_, _Verify and Save_ or _Verify entire box_
 
 A single action that changes several records, such as a swap or _Verify entire box_, writes one entry per record changed. The entries are linked so they read as one action.

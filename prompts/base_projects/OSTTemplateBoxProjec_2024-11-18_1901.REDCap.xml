@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="OST Template Box Project" AsOfDateTime="2024-11-18T19:01:42" CreationDateTime="2024-11-18T19:01:42" SourceSystem="REDCap" SourceSystemVersion="14.8.0">
+<Study OID="Project.OSTTemplateBoxProject">
+<GlobalVariables>
+	<StudyName>OST Template Box Project</StudyName>
+	<StudyDescription>This file contains the metadata, events, and data for REDCap project "OST Template Box Project".</StudyDescription>
+	<ProtocolName>OST Template Box Project</ProtocolName>
+	<redcap:RecordAutonumberingEnabled>1</redcap:RecordAutonumberingEnabled>
+	<redcap:CustomRecordLabel></redcap:CustomRecordLabel>
+	<redcap:SecondaryUniqueField></redcap:SecondaryUniqueField>
+	<redcap:SecondaryUniqueFieldDisplayValue>1</redcap:SecondaryUniqueFieldDisplayValue>
+	<redcap:SecondaryUniqueFieldDisplayLabel>1</redcap:SecondaryUniqueFieldDisplayLabel>
+	<redcap:SchedulingEnabled>0</redcap:SchedulingEnabled>
+	<redcap:SurveysEnabled>0</redcap:SurveysEnabled>
+	<redcap:SurveyInvitationEmailField></redcap:SurveyInvitationEmailField>
+	<redcap:RandomizationEnabled>0</redcap:RandomizationEnabled>
+	<redcap:DisplayTodayNowButton>1</redcap:DisplayTodayNowButton>
+	<redcap:PreventBranchingEraseValues>0</redcap:PreventBranchingEraseValues>
+	<redcap:RequireChangeReason>0</redcap:RequireChangeReason>
+	<redcap:DataHistoryPopup>1</redcap:DataHistoryPopup>
+	<redcap:OrderRecordsByField></redcap:OrderRecordsByField>
+	<redcap:taskCompleteStatus>2</redcap:taskCompleteStatus>
+	<redcap:MyCapEnabled>0</redcap:MyCapEnabled>
+	<redcap:Purpose>0</redcap:Purpose>
+	<redcap:PurposeOther></redcap:PurposeOther>
+	<redcap:ProjectNotes></redcap:ProjectNotes>
+	<redcap:MissingDataCodes></redcap:MissingDataCodes>
+	<redcap:ProtectedEmailMode>0</redcap:ProtectedEmailMode>
+	<redcap:ProtectedEmailModeCustomText></redcap:ProtectedEmailModeCustomText>
+	<redcap:ProtectedEmailModeTrigger>ALL</redcap:ProtectedEmailModeTrigger>
+	<redcap:ProtectedEmailModeLogo></redcap:ProtectedEmailModeLogo>
+</GlobalVariables>
+<MetaDataVersion OID="Metadata.OSTTemplateBoxProject_2024-11-18_1901" Name="OST Template Box Project" redcap:RecordIdField="record_id">
+	<FormDef OID="Form.form_1" Name="Form 1" Repeating="No" redcap:FormName="form_1">
+		<ItemGroupRef ItemGroupOID="form_1.record_id" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="form_1.form_1_complete" Mandatory="No"/>
+	</FormDef>
+	<ItemGroupDef OID="form_1.record_id" Name="Form 1" Repeating="No">
+		<ItemRef ItemOID="record_id" Mandatory="No" redcap:Variable="record_id"/>
+		<ItemRef ItemOID="box_name" Mandatory="No" redcap:Variable="box_name"/>
+		<ItemRef ItemOID="box_size" Mandatory="No" redcap:Variable="box_size"/>
+		<ItemRef ItemOID="box_status" Mandatory="No" redcap:Variable="box_status"/>
+		<ItemRef ItemOID="shipment_record_id" Mandatory="No" redcap:Variable="shipment_record_id"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="form_1.form_1_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="form_1_complete" Mandatory="No" redcap:Variable="form_1_complete"/>
+	</ItemGroupDef>
+	<ItemDef OID="record_id" Name="record_id" DataType="text" Length="999" redcap:Variable="record_id" redcap:FieldType="text">
+		<Question><TranslatedText>Record ID</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="box_name" Name="box_name" DataType="text" Length="999" redcap:Variable="box_name" redcap:FieldType="text">
+		<Question><TranslatedText>Box Name</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="box_size" Name="box_size" DataType="text" Length="4" redcap:Variable="box_size" redcap:FieldType="select">
+		<Question><TranslatedText>Box Size</TranslatedText></Question>
+		<CodeListRef CodeListOID="box_size.choices"/>
+	</ItemDef>
+	<ItemDef OID="box_status" Name="box_status" DataType="text" Length="9" redcap:Variable="box_status" redcap:FieldType="select" redcap:FieldAnnotation="@DEFAULT=&#039;available&#039;">
+		<Question><TranslatedText>Box Status</TranslatedText></Question>
+		<CodeListRef CodeListOID="box_status.choices"/>
+	</ItemDef>
+	<ItemDef OID="shipment_record_id" Name="shipment_record_id" DataType="text" Length="999" redcap:Variable="shipment_record_id" redcap:FieldType="text" redcap:FieldAnnotation="@READONLY">
+		<Question><TranslatedText>Shipment Record ID</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="form_1_complete" Name="form_1_complete" DataType="text" Length="1" redcap:Variable="form_1_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="form_1_complete.choices"/>
+	</ItemDef>
+	<CodeList OID="box_size.choices" Name="box_size" DataType="text" redcap:Variable="box_size">
+		<CodeListItem CodedValue="7x7"><Decode><TranslatedText>7x7</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="9x9"><Decode><TranslatedText>9x9</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8x12"><Decode><TranslatedText>8x12</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="44x7"><Decode><TranslatedText>44x7</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="box_status.choices" Name="box_status" DataType="text" redcap:Variable="box_status">
+		<CodeListItem CodedValue="available"><Decode><TranslatedText>Available</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="closed"><Decode><TranslatedText>Closed</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="form_1_complete.choices" Name="form_1_complete" DataType="text" redcap:Variable="form_1_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+</MetaDataVersion>
+</Study>
+<ClinicalData StudyOID="Project.OSTTemplateBoxProject" MetaDataVersionOID="Metadata.OSTTemplateBoxProject_2024-11-18_1901">
+	<SubjectData SubjectKey="1" redcap:RecordIdField="record_id">
+			<FormData FormOID="Form.form_1" FormRepeatKey="1">
+				<ItemGroupData ItemGroupOID="form_1.record_id" ItemGroupRepeatKey="1">
+					<ItemData ItemOID="record_id" Value="1"/>
+					<ItemData ItemOID="box_name" Value="STUDY-WB-BX001"/>
+					<ItemData ItemOID="box_size" Value="8x12"/>
+					<ItemData ItemOID="box_status" Value="available"/>
+					<ItemData ItemOID="shipment_record_id" Value="1"/>
+				</ItemGroupData>
+				<ItemGroupData ItemGroupOID="form_1.form_1_complete" ItemGroupRepeatKey="1">
+					<ItemData ItemOID="form_1_complete" Value="0"/>
+				</ItemGroupData>
+			</FormData>
+	</SubjectData>
+</ClinicalData>
+</ODM>

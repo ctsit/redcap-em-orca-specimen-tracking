@@ -12,9 +12,43 @@ The staff at the CURATE Biorepository at ESU curate biospecimens, managing the s
 
 At each CURATE site, staff collects, prepares, aliquots, labels and freezes biospecimens for temporary storage. Each specimen is an aliquot in a labeled tube. Each specimen has a unique specimen name printed on a label affixed to the tube. The label also encodes that specimen name in a QR code. The specimen names are often structured and include details about the research participant, collection event and specimen contents. The specimens are placed in boxes. A typical box is a 9 × 9 grid with 81 cells for 81 specimens from one or more research participants. Each box has a unique name. Once loaded with a batch of specimens, the box is placed in a freezer for temporary safekeeping.
 
-The CURATE sites use ORCA Specimen Tracking (OST) to manage the metadata about the specimens and boxes. At a minimum, OST knows the name of each specimen and the coordinates it occupies in the box. OST knows the name of the box, its dimensions, and whether the box has been shipped. OST knows the name and date of the shipment. As OST is extensible, it can record other facts about the specimen, box and shipment. CURATE uses the extensibility to record details about the specimen collection and processing and extra details about shipment. These additional details provide the provenance CURATE needs to support the quality of their work and research product.
+The CURATE sites use ORCA Specimen Tracking (OST) to manage the metadata about the specimens and boxes. At a minimum, OST knows the name of each specimen and the coordinates it occupies in the box. OST knows the name of the box, its dimensions, and whether the box has been shipped. OST knows the name and status of the shipment. As OST is extensible, it can record other facts about the specimen, box and shipment. CURATE uses the extensibility to record details about the specimen collection and processing and extra details about shipment. These additional details provide the provenance CURATE needs to support the quality of their work and research product.
 
 At Southern Network for Academic Clinical Care (SNACC), Dan manages the CURATE biospecimen shipments. At regular intervals, Dan ships one or more boxes of biospecimens from SNACC to the CURATE Biorepository at ESU. Dan records the shipping details. He includes a manifest of the contents of the boxes in the shipping container. The manifest is a report of the data already stored in OST.
+
+## OST core fields and CURATE extensions
+
+These stories distinguish what OST itself requires from what CURATE adds to its own OST projects. Any OST installation must define the core fields. CURATE's extensions are local choices, and OST must work without them.
+
+### Core fields
+
+OST requires these fields in its three projects today:
+
+- **Box:** `record_id`, `box_name`, `box_size`, `box_status`, `shipment_record_id`
+- **Specimen:** `record_id`, `specimen_name`, `box_record_id`, `box_position`
+- **Shipment:** `record_id`, `shipment_name`, `shipment_status`
+
+These stories propose four new required fields:
+
+- **Box:** `box_verified` (yes/no)
+- **Specimen:** `specimen_verified` (yes/no)
+- **Shipment:** `shipment_verified` (yes/no) and `shipment_object` (file upload, holding the JSON shipment object)
+
+Existing OST installations will need to add these fields when they upgrade.
+
+### Verification is required but can be hidden
+
+Verification exists to support receiving specimens from other systems, such as a site's shipment or a migration of legacy data. A site that only enters specimens by hand may have no use for it. So the verification fields are always required, but a module configuration setting, _Enable verification_, controls whether OST shows the verification buttons, columns and messages. With verification hidden, OST still maintains the fields.
+
+A specimen entered by hand, with the tube in hand, is verified by construction: OST sets its `specimen_verified` to "Yes" when it is saved. Only imported and migrated specimens and boxes start out unverified. The CBR enables verification. SNACC may leave it hidden.
+
+### CURATE extensions
+
+CURATE adds these to its OST projects. The stories mark each one where it first appears.
+
+- **Shipment date** and **tracking number** on the shipment record.
+- **Provenance fields** about specimen collection and processing.
+- **Specimen name components.** CURATE's `specimen_name_regex` extracts participant, visit and specimen type from structured specimen names. Other installations may have no components, or different ones.
 
 ## CURATE Biorepository
 

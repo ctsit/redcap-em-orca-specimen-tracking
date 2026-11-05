@@ -1,14 +1,14 @@
 # user_story_review_migrated_boxes.md
 
-Alice, who we discussed in `./user_story_background.md`, needs to review the boxes of historic hand-labeled specimens that Bob migrated into OST. Every migrated box and specimen starts out unverified; each box's `box_verified` field is "No". Many of these boxes are overloaded with orphans, and their specimens have no QR codes.
+Alice, who we discussed in `./user_story_background.md`, needs to review the boxes of historic hand-labeled specimens that Bob migrated into OST. Every migrated box and specimen starts out unverified: each box's `box_verified` and each specimen's `specimen_verified` is "No". Many of these boxes are overloaded with orphans, and their specimens have no QR codes.
 
 ## Finding migrated boxes
 
-When Alice opens the Specimen Entry Dashboard, OST shows the box selection screen, a list of boxes. The CBR has configured OST to include the yes/no `box_verified` field as a column in this list. Alice filters the list to show only boxes where `box_verified` is "No", or she sorts the list by `box_verified` so the unverified boxes come first. She opens one of those boxes in the Specimen Entry Dashboard and pulls the matching physical box from the freezer. She works through the box cell by cell with the physical box in hand.
+When Alice opens the Specimen Entry Dashboard, OST shows the box selection screen, a list of boxes. Because the CBR has _Enable verification_ turned on, the list includes the core yes/no `box_verified` field as a column. Alice filters the list to show only boxes where `box_verified` is "No", or she sorts the list by `box_verified` so the unverified boxes come first. She opens one of those boxes in the Specimen Entry Dashboard and pulls the matching physical box from the freezer. She works through the box cell by cell with the physical box in hand.
 
 ## Identifying hand-labeled specimens
 
-Alice pulls a specimen from the physical box and reads its handwritten label. She hand-keys the participant, visit and specimen type from the label into the search field. If only one specimen matches, OST loads it into the left-hand pane and highlights its cell in the right-hand pane.
+Alice pulls a specimen from the physical box and reads its handwritten label. She hand-keys the participant, visit and specimen type from the label into the search field. (Matching on these specimen name components is a CURATE extension; without components, OST matches the entry against the text of specimen names.) If only one specimen matches, OST loads it into the left-hand pane and highlights its cell in the right-hand pane.
 
 If several specimens match, OST shows a pick list of the matches. The list puts this box's orphans and unverified specimens first, then unverified specimens in other boxes, then everything else. Each row shows the match's specimen name, box, cell and verification status. Because specimens with identical labels are interchangeable, Alice picks the first suitable match. OST loads it into the left-hand pane and highlights its cell.
 
