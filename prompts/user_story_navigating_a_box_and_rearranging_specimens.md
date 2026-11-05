@@ -8,7 +8,7 @@ If Alice is in the specimen list in the lower pane, she uses the up and down arr
 
 ## Moving specimens
 
-Inspecting a box, Alice realizes the specimens are in the wrong order. As she physically moves a specimen from one cell to another, she drags the specimen from the old cell to the new cell in the box grid. OST updates the specimen's cell as she does this. Alice can also grab a specimen from the list view and drag it to any cell in the box grid to update the specimen's cell. Each moved specimen is marked as verified.
+Inspecting a box, Alice realizes the specimens are in the wrong order. As she physically moves a specimen from one cell to another, she drags the specimen from the old cell to the new cell in the box grid. OST updates the specimen's cell as she does this. Alice can also grab a specimen from the list view and drag it to any cell in the box grid to update the specimen's cell. Each moved specimen is marked as verified. OST records each move in the change log.
 
 If Alice drags a specimen to an occupied cell, the specimens will swap cells.
 

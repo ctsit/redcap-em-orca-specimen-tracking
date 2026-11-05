@@ -20,7 +20,7 @@ At Southern Network for Academic Clinical Care (SNACC), Dan manages the CURATE b
 
 The CURATE Biorepository (CBR) at ESU is managed by the Biorepository Manager, Alice. Alice is responsible for the specimens stored in the biorepository's freezers. She receives and verifies shipments from the sites, chooses locations in the freezers to store new boxes, reviews freezer and box inventory, reviews migrated boxes, and pulls and ships specimens for studies and assay runs.
 
-Alice often works with Bob, the informaticist. Bob has access to the data underlying the CBR's inventory and good informatics tools. Bob runs queries of the OST site data to audit the sites' biospecimen collection work. He also loads assay data coming from the labs. While Alice runs many of her queries in OST, she sometimes turns to Bob for more complex queries.
+Alice often works with Bob, the informaticist. Bob has access to the data underlying the CBR's inventory and good informatics tools. Bob runs queries of the OST site data to audit the sites' biospecimen collection work. He also loads assay data coming from the labs. While Alice runs many of her queries in OST, she sometimes turns to Bob for more complex queries. Bob also audits changes made in OST with its change log (see `./user_story_change_log.md`).
 
 ### Historic hand-labeled specimens
 
